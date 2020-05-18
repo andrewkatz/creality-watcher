@@ -1,0 +1,24 @@
+# Push notifications via Pushover.
+# https://support.pushover.net/i7-what-is-pushover-and-how-do-i-use-it
+pushover_enabled: true
+pushover_app_key: some_app_key
+pushover_user_key: some_user_key
+
+# Paths to monitor to check if they're in stock.
+creality_paths:
+  - /products/official-creality-ender-3-3d-printer?variant=31475587809353
+  - /collections/ender-series/products/creality-ender-3-pro-3d-printer?variant=31314964906057
+  - /products/creality-ender-5-3d-printer?variant=16035813392433
+  - /products/ender-5-pro-3d-printer?variant=31177472409673
+  - /products/creality-ender-5-plus-3d-printer?variant=31151789572169
+  - /products/ender-3-v2-3d-printer?variant=31349548974153
+  - /collections/bl-touch/products/creality-bl-touch?variant=31268470161481
+
+# NOTE: Please be considerate of Creality's servers. If you send too many requests too quickly, it could
+# cause unnecessary strain on their server network.
+#
+# How long to wait between checking all paths (seconds).
+group_request_delay: 30
+
+# How long to wait between each path in the list (seconds).
+single_request_delay: 0.5
