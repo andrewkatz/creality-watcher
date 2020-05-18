@@ -12,7 +12,12 @@ end
 
 BASE_URL = 'https://www.creality3dofficial.com'
 
-config = YAML.load_file('config.yml')
+begin
+  config = YAML.load_file('config.yml')
+rescue Errno::ENOENT
+  puts 'Missing configuration file `config.yml`'
+  exit
+end
 pushover_enabled = config['pushover_enabled']
 single_request_delay = config['single_request_delay'].to_f
 group_request_delay = config['group_request_delay'].to_f
